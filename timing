@@ -1,0 +1,62 @@
+Rust (optimized/release)
+    Finished release [optimized] target(s) in 0.00s
+     Running `target/release/sort`
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+cargo run --release  0.04s user 0.02s system 99% cpu 0.066 total
+    Finished release [optimized] target(s) in 0.00s
+     Running `target/release/sort`
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+cargo run --release  0.07s user 0.01s system 99% cpu 0.087 total
+    Finished release [optimized] target(s) in 0.00s
+     Running `target/release/sort`
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+cargo run --release  0.06s user 0.02s system 98% cpu 0.084 total
+
+R1
+[1] "aa-2"   "aa-10"  "ab-3"   "ab-100" "ba-25" 
+Rscript sort1.R  0.15s user 0.05s system 102% cpu 0.197 total
+[1] "aa-2"   "aa-10"  "ab-3"   "ab-100" "ba-25" 
+Rscript sort1.R  0.17s user 0.05s system 102% cpu 0.206 total
+[1] "aa-2"   "aa-10"  "ab-3"   "ab-100" "ba-25" 
+Rscript sort1.R  0.16s user 0.05s system 103% cpu 0.202 total
+
+R2
+[1] "aa-2"   "aa-10"  "ab-3"   "ab-100" "ba-25" 
+Rscript sort2.R  0.72s user 0.05s system 100% cpu 0.774 total
+[1] "aa-2"   "aa-10"  "ab-3"   "ab-100" "ba-25" 
+Rscript sort2.R  0.67s user 0.06s system 100% cpu 0.720 total
+[1] "aa-2"   "aa-10"  "ab-3"   "ab-100" "ba-25" 
+Rscript sort2.R  0.69s user 0.04s system 99% cpu 0.737 total
+
+Python
+['aa-2', 'aa-10', 'ab-3', 'ab-100', 'ba-25']
+python3 sort.py  0.03s user 0.00s system 98% cpu 0.032 total
+['aa-2', 'aa-10', 'ab-3', 'ab-100', 'ba-25']
+python3 sort.py  0.02s user 0.01s system 98% cpu 0.034 total
+['aa-2', 'aa-10', 'ab-3', 'ab-100', 'ba-25']
+python3 sort.py  0.03s user 0.02s system 98% cpu 0.059 total
+
+Julia1
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+julia sort1.jl  1.10s user 0.68s system 236% cpu 0.750 total
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+julia sort1.jl  1.14s user 0.64s system 233% cpu 0.765 total
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+julia sort1.jl  1.13s user 0.62s system 241% cpu 0.725 total
+
+Julia2
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+julia sort2.jl  0.97s user 0.64s system 270% cpu 0.596 total
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+julia sort2.jl  1.00s user 0.58s system 259% cpu 0.607 total
+["aa-2", "aa-10", "ab-3", "ab-100", "ba-25"]
+julia sort2.jl  0.96s user 0.63s system 276% cpu 0.578 total
+
+Bash
+aa-2 aa-10 ab-3 ab-100 ba-25 
+./sort.sh  0.01s user 0.00s system 109% cpu 0.013 total
+aa-2 aa-10 ab-3 ab-100 ba-25 
+./sort.sh  0.00s user 0.01s system 108% cpu 0.015 total
+aa-2 aa-10 ab-3 ab-100 ba-25 
+./sort.sh  0.01s user 0.00s system 99% cpu 0.009 total
+
